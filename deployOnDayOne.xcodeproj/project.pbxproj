@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		319B90FD1A79442C00755637 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 319B90FC1A79442C00755637 /* main.m */; };
+		319B91051A7945BC00755637 /* MyApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 319B91041A7945BC00755637 /* MyApp.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -25,6 +26,9 @@
 /* Begin PBXFileReference section */
 		319B90F91A79442C00755637 /* deployOnDayOne */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = deployOnDayOne; sourceTree = BUILT_PRODUCTS_DIR; };
 		319B90FC1A79442C00755637 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		319B91031A7945BC00755637 /* MyApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyApp.h; sourceTree = "<group>"; };
+		319B91041A7945BC00755637 /* MyApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyApp.m; sourceTree = "<group>"; };
+		8D696DFE07E74A14CA4CF45F /* libPods-deployOnDayOne.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-deployOnDayOne.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -43,6 +47,7 @@
 			children = (
 				319B90FB1A79442C00755637 /* deployOnDayOne */,
 				319B90FA1A79442C00755637 /* Products */,
+				7677F9A0A6BF4D7C2ED76005 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -58,8 +63,18 @@
 			isa = PBXGroup;
 			children = (
 				319B90FC1A79442C00755637 /* main.m */,
+				319B91031A7945BC00755637 /* MyApp.h */,
+				319B91041A7945BC00755637 /* MyApp.m */,
 			);
 			path = deployOnDayOne;
+			sourceTree = "<group>";
+		};
+		7677F9A0A6BF4D7C2ED76005 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8D696DFE07E74A14CA4CF45F /* libPods-deployOnDayOne.a */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -119,6 +134,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				319B90FD1A79442C00755637 /* main.m in Sources */,
+				319B91051A7945BC00755637 /* MyApp.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -232,6 +248,7 @@
 				319B91021A79442C00755637 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
