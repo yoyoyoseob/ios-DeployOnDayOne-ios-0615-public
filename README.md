@@ -57,6 +57,7 @@ You might then show a sub-menu for each of these options, something like this fo
 
 ```
 @"\r\rYou have chosen to be interviewed.\r1. Choose the question you will be asked.\r2. Be asked a random question."
+```
 
 3) When reading interviews of other students, the user should be able to choose which student's `interview` they want to read, and which `question` they would like to see the `answer` to from the chosen `user` (student). Feel free to put in triggers for further questions. For example, you mentioned sports in an answer, maybe ask them about who their favorite team is. This is 100% optional. I'd do the simplest case first, then make it more complicated!
 
