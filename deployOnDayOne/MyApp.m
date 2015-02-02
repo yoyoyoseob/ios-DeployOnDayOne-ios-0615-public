@@ -7,7 +7,6 @@
 //
 
 #import "MyApp.h"
-#import "FirebaseAPI.h"
 
 @interface MyApp()
 
