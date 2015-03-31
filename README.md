@@ -36,12 +36,6 @@ Develop an application *with the person next to you* that runs in our nifty debu
 Here's an example of what your menu might read like:
 
 ```
-@"Please choose from the following three options:\r\r1. Be interviewed.\r2. Write a new interview question.\r3. Read an interview with another student.\r\rSimply type in the option number you are interested in, and press enter."
-```
-
-which renders like this:
-
-```
 2015-02-02 08:42:52.517 deployOnDayOne[71560:303] 
 
 Please choose from the following three options:
@@ -56,7 +50,14 @@ Simply type in the option number you are interested in, and press enter.
 You might then show a sub-menu for each of these options, something like this for #1 for instance:
 
 ```
-@"\r\rYou have chosen to be interviewed.\r1. Choose the question you will be asked.\r2. Be asked a random question."
+2015-02-02 08:43:13.211 deployOnDayOne[71560:303] 
+
+You have chosen to be interviewed.
+
+1. Choose the question you will be asked.
+2. Be asked a random question.
+
+Simply type in the option number you are interested in, and press enter.
 ```
 
 3) When reading interviews of other students, the user should be able to choose which student's `interview` they want to read, and which `question` they would like to see the `answer` to from the chosen `user` (student). Feel free to put in triggers for further questions. For example, you mentioned sports in an answer, maybe ask them about who their favorite team is. This is 100% optional. I'd do the simplest case first, then make it more complicated!
