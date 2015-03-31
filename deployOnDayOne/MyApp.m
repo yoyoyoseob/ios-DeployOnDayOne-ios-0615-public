@@ -21,12 +21,9 @@
 }
 // Do not modify this method
 -(NSString *)requestKeyboardInput {
-    -(NSString *)requestKeyboardInput {
-        char string[4096]; //Technically there should be some safety on this to avoid an error if you write too much.
-        fgets(string, sizeof(string), stdin);
-        NSString *result = [NSString stringWithUTF8String:string];
-        return [result stringByTrimmingCharactersInSet:[NSCharacterSet newlineCharacterSet]];
-    }
+    char string[4096]; //Technically there should be some safety on this to avoid an error if you write too much.
+    scanf("%s", string);
+    return [NSString stringWithUTF8String:string];
 }
 
 @end
