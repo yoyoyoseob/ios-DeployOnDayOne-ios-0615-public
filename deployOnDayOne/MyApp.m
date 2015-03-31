@@ -19,7 +19,7 @@
     // Begin writing your code here. This method will kick off automatically.
 
 }
-
+// Do not modify this method
 -(NSString *)requestKeyboardInput {
     -(NSString *)requestKeyboardInput {
         char string[4096]; //Technically there should be some safety on this to avoid an error if you write too much.
