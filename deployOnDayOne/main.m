@@ -11,7 +11,6 @@
 
 int main(int argc, const char * argv[]) {
     @autoreleasepool {
-        // insert code here...
         MyApp *newApp = [[MyApp alloc] init];
         
         [newApp execute];

@@ -8,6 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
+
 @interface MyApp : NSObject
 
 @property (strong, nonatomic, readonly) NSString *currentUser;

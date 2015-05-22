@@ -8,22 +8,29 @@
 
 #import "MyApp.h"
 
+
 @interface MyApp()
 
 @end
 
+
 @implementation MyApp
 
--(void)execute {
-
+-(void)execute
+{
     // Begin writing your code here. This method will kick off automatically.
 
+
 }
-// Do not modify this method
--(NSString *)requestKeyboardInput {
-    char string[4096]; //Technically there should be some safety on this to avoid an error if you write too much.
-    scanf("%s", string);
-    return [NSString stringWithUTF8String:string];
+
+
+// This method will read a line of text from the console and return it as an NSString instance.
+// You shouldn't have any need to modify (or really understand) this method.
+-(NSString *)requestKeyboardInput
+{
+    char stringBuffer[4096] = { 0 };  // Technically there should be some safety on this to avoid a crash if you write too much.
+    scanf("%[^\n]%*c", stringBuffer);
+    return [NSString stringWithUTF8String:stringBuffer];
 }
 
 @end
