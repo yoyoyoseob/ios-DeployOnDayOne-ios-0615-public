@@ -7,9 +7,9 @@ language: objc
 
 Welcome to Flatiron! 
 
-You're going to be writing code every day that you're here, and today is no exception. Let's see what you remember from doing the prework and write a simple about me application. In this lab we'll check a few concepts. Most importantly, we are going to do some simple Objective-C work. Let's get started!
+You're going to be writing code every day that you're here, and today is no exception. Let's see what you remember from doing the prework and write a simple application to get to know one another. In this lab we'll check a few concepts. Most importantly, we are going to do some simple Objective-C work. Let's get started!
 
-##Pro Tips
+##Tips
 
 - You'll have ~3hrs to complete this.
 - If you feel stuck, ask your new best friends for help.
@@ -18,16 +18,17 @@ You're going to be writing code every day that you're here, and today is no exce
 - Types of questions you'll probably want to ask that we'd like you to decide with your group.
 	- Should we all work on one computer or each do our own and use git to manage merging our work together?
 	- How do we put all our changes into one repository?
-- The most important things are getting something working and learning to work as a team. There really are no wrong answers.
+- The most important things are getting something working and learning to work as a team. There really are no wrong answers. 
+- Keep in mind that you don't need to build things in the order they are presented below! Start with the easiest possible thing that begins to attack the problem, and build from there.
 - Have fun with your new best friends!
 
 ## Instructions
 
-As you've just heard, we want to make sure you know that [imposter syndrome](http://en.wikipedia.org/wiki/Impostor_syndrome) is just a phase. And today we're going to get over our initial [imposter syndrome](http://en.wikipedia.org/wiki/Impostor_syndrome) and jump right in.
+As you've just heard, we want to make sure you know that [imposter syndrome](http://en.wikipedia.org/wiki/Impostor_syndrome) is just a phase. Today we're going to get over our initial imposter syndrome by jumping right in. You'll be surprised at how much you already know and how fast you'll learn from your peers.
 
 Your mission, the one you've already chosen to accept by being here today, is as follows:
 
-Develop an application *with the person next to you* that runs in our nifty debugger window. Collaborate however you'd like: working on the same machine, each on your own, git, whatever! No fancy iPhone / iPad interfaces today! We're back in the 80's with a simple text-based application. This application is meant to help you get to know your fellow students better. And here's what it has to be able to do:
+Develop an application *with the person next to you* that runs in Xcode's nifty debugger window. Collaborate however you'd like: working on the same machine, each on your own, git, whatever! No fancy iPhone / iPad interfaces today! We're back in the 80's with a simple text-based application. This application is meant to help you get to know your fellow students better. And here's what it has to be able to do:
 
 1) `login` a student by name as the `currentUser` (or sign them up if they don't already exist in our list (`NSArray`) of students who have registered to use the app.) In other words, ask for their name so you know who is currently using the app. You'll use their name to associate answers to interview questions with a specific person. (Make sure you have a `logout` method as well!) Hint on how to do this: Consider just storing the `currentUser` as a property.
 
@@ -77,5 +78,5 @@ Some important hints and reminders:
 * Google it!
 * You'll want to write all of your code in the `MyApp.m` file.
 * Make sure to take advantage of the method we have written for you in order to get access to the keyboard inputs in the debugger window. These are `requestKeyboardInput`. Don't worry about how they work. Just know you get back the input from the user which you can store in a variable.
-* Use NSLog to "talk" to your user in the debugger.
-* For formatting, you can use `\r` in your strings to add line breaks and not have to write multiple `NSLog` statements if you don't want to. But multiple `NSLog` statements will work too!
+* Use `NSLog` to "talk" to your user in the debugger.
+* For formatting, you can use `\n` in your strings to add line breaks and not have to write multiple `NSLog` statements if you don't want to. But multiple `NSLog` statements will work too!
