@@ -11,7 +11,13 @@
 
 @interface MyApp : NSObject
 
+@property (strong, nonatomic) NSMutableArray *listOfUsers;
+@property (strong, nonatomic) NSString *userResponse;
 @property (strong, nonatomic) NSString *currentUser;
+
+-(NSString*)requestKeyboardInput;
+-(void)getUser;
+-(void)logInOrSignUp;
 
 -(void)execute;
 
