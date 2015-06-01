@@ -18,25 +18,15 @@
 
 -(void)execute
 {
-    NSLog(@"Hey, what's your name?");
+    self.listOfUsers = [[NSMutableArray alloc] init];
+    
+    [self createQAArrays];
+    
     [self getUser];
-    
-//    NSLog(@"Hey, %@", self.currentUser);
-    
-    
-//    NSLog(@"Press 1 for login, press 2 for signup, press 3 for logout");
-//    [self logInOrSignUp];
-//    NSLog(@"Your response was %@", self.userResponse);
-//    
-//    if ([self.userResponse isEqualToString:@"1"]){
-//        NSLog(@"you pressed 1");
-//    }
-//    else if ([self.userResponse isEqualToString:@"2"]){
-//        NSLog(@"you pressed 2");
-//    }
-//    else if ([self.userResponse isEqualToString:@"3"]){
-//        NSLog(@"you didn't press anything");
-//    }
+    [self menu];
+
+
+
 
     
     
@@ -54,7 +44,8 @@
 
 -(void)getUser
 {
-    self.listOfUsers = [[NSMutableArray alloc] init];
+    NSLog(@"Hey, what's your name?");
+    
     BOOL nameMatch = NO;
     self.currentUser = [self requestKeyboardInput];
     for (NSString *users in self.listOfUsers){
@@ -69,9 +60,78 @@
     }
 }
 
--(void)logInOrSignUp
+-(void)menu
 {
-    self.userResponse = [self requestKeyboardInput];
+    NSLog(@"What do you want to do?");
+    NSLog(@"\r 1. Be Interviewed. \r 2. Add questions.  \r 3. Read answers. \r 4. Exit.");
+    NSString *menuResponse = [self requestKeyboardInput];
+    
+    if ([menuResponse isEqualToString:@"1"]){
+        [self askQuestions];
+    } else if ([menuResponse isEqualToString:@"2"]){
+        [self addQuestions];
+    } else if ([menuResponse isEqualToString:@"3"]){
+        [self readAnswers];
+    }else if ([menuResponse isEqualToString:@"4"]){
+        [self getUser];
+    } else {
+        NSLog(@"You did it wrong...");
+    }
+    
+    
 }
+
+-(void)createQAArrays
+{
+     self.questionsArray = [[NSMutableArray alloc] initWithObjects:@"Where were you born?", @"Have you ever wanted to be an astronaut?", @"Do you like Korean food?", nil];
+    self.listOfAnswers = [[NSMutableArray alloc] initWithObjects:@"", @"", @"", nil];
+    
+}
+
+-(void)askQuestions
+{
+    
+    for (int i = 0; i < [self.questionsArray count]; i++){
+        if ([[self.listOfAnswers objectAtIndex:i] isEqualToString:@""]) {
+            NSLog(@"%@", [self.questionsArray objectAtIndex:i]);
+            [self.listOfAnswers replaceObjectAtIndex:i withObject:[self requestKeyboardInput]];
+             }
+    }
+    
+
+    NSLog(@"Thanks for answering the questions!");
+    [self menu];
+}
+
+-(void)addQuestions
+{
+    NSLog(@"What's yo question?");
+    [self.questionsArray addObject:[self requestKeyboardInput]];
+    [self.listOfAnswers addObject:@""];
+    NSLog(@"Would you like to add another question? /r 1. Yes /r 2. No");
+    NSString *answer = [self requestKeyboardInput];
+    if ([answer isEqualToString:@"1"]) {
+        [self addQuestions];
+    } else {
+        [self menu];
+    }
+    
+}
+
+-(void)readAnswers
+{
+    for (int i = 0; i < [self.questionsArray count]; i++){
+        NSLog(@"%@", self.questionsArray[i]);
+        
+        if ([[self.listOfAnswers objectAtIndex:i] isEqualToString:@""]){
+            NSLog(@"You didn't answer the question");
+        }
+        else {
+            NSLog(@"%@", self.listOfAnswers[i]);
+        }
+    }
+    [self menu];
+}
+
 
 @end

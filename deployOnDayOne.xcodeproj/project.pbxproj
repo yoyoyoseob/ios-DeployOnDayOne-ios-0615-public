@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		319B90FD1A79442C00755637 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 319B90FC1A79442C00755637 /* main.m */; };
 		319B91051A7945BC00755637 /* MyApp.m in Sources */ = {isa = PBXBuildFile; fileRef = 319B91041A7945BC00755637 /* MyApp.m */; };
+		71C7E70E1B1CFC9000BD8E39 /* Person.m in Sources */ = {isa = PBXBuildFile; fileRef = 71C7E70D1B1CFC9000BD8E39 /* Person.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -28,6 +29,8 @@
 		319B90FC1A79442C00755637 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		319B91031A7945BC00755637 /* MyApp.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyApp.h; sourceTree = "<group>"; };
 		319B91041A7945BC00755637 /* MyApp.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyApp.m; sourceTree = "<group>"; };
+		71C7E70C1B1CFC9000BD8E39 /* Person.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Person.h; sourceTree = "<group>"; };
+		71C7E70D1B1CFC9000BD8E39 /* Person.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Person.m; sourceTree = "<group>"; };
 		8D696DFE07E74A14CA4CF45F /* libPods-deployOnDayOne.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-deployOnDayOne.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -65,6 +68,8 @@
 				319B90FC1A79442C00755637 /* main.m */,
 				319B91031A7945BC00755637 /* MyApp.h */,
 				319B91041A7945BC00755637 /* MyApp.m */,
+				71C7E70C1B1CFC9000BD8E39 /* Person.h */,
+				71C7E70D1B1CFC9000BD8E39 /* Person.m */,
 			);
 			path = deployOnDayOne;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				71C7E70E1B1CFC9000BD8E39 /* Person.m in Sources */,
 				319B90FD1A79442C00755637 /* main.m in Sources */,
 				319B91051A7945BC00755637 /* MyApp.m in Sources */,
 			);

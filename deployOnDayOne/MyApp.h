@@ -14,10 +14,13 @@
 @property (strong, nonatomic) NSMutableArray *listOfUsers;
 @property (strong, nonatomic) NSString *userResponse;
 @property (strong, nonatomic) NSString *currentUser;
+@property (strong, nonatomic) NSMutableArray *listOfAnswers;
+@property (strong, nonatomic) NSMutableArray *questionsArray;
 
 -(NSString*)requestKeyboardInput;
 -(void)getUser;
--(void)logInOrSignUp;
+-(void)menu;
+-(void)readAnswers;
 
 -(void)execute;
 
