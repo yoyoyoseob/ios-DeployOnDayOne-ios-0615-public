@@ -16,6 +16,7 @@
 @property (strong, nonatomic) NSString *currentUser;
 @property (strong, nonatomic) NSMutableArray *listOfAnswers;
 @property (strong, nonatomic) NSMutableArray *questionsArray;
+@property (strong, nonatomic) NSMutableDictionary *allUsers;
 
 -(NSString*)requestKeyboardInput;
 -(void)getUser;

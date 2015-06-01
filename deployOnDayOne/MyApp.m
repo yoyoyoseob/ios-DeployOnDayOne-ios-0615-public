@@ -19,6 +19,7 @@
 -(void)execute
 {
     self.listOfUsers = [[NSMutableArray alloc] init];
+    self.allUsers = [[NSMutableDictionary alloc] init];
     
     [self createQAArrays];
     
@@ -48,14 +49,16 @@
     
     BOOL nameMatch = NO;
     self.currentUser = [self requestKeyboardInput];
-    for (NSString *users in self.listOfUsers){
+    for (NSString *users in self.allUsers){
         if ([self.currentUser isEqualToString:users]){
             NSLog(@"Welcome back!");
             nameMatch = YES;
         }
     }
     if (nameMatch == NO){
-        ([self.listOfUsers addObject:self.currentUser]);
+        NSMutableArray *answers = self.listOfAnswers;
+        NSString *user = self.currentUser;
+        ([self.allUsers setObject:answers forKey:user]);
         NSLog(@"Welcome to our app %@", self.currentUser);
     }
 }
@@ -73,7 +76,10 @@
     } else if ([menuResponse isEqualToString:@"3"]){
         [self readAnswers];
     }else if ([menuResponse isEqualToString:@"4"]){
+        self.listOfAnswers = [[NSMutableArray alloc] initWithObjects:@"", @"", @"", nil];
+        NSLog(@"%@", self.allUsers);
         [self getUser];
+        [self menu];
     } else {
         NSLog(@"You did it wrong...");
     }
