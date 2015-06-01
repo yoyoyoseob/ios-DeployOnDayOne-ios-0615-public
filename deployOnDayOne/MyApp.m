@@ -56,7 +56,12 @@
         }
     }
     if (nameMatch == NO){
-        NSMutableArray *answers = self.listOfAnswers;
+        NSMutableArray *answers = [[NSMutableArray alloc] init];
+        for (int i = 0; i < [self.questionsArray count]; i++){
+            [answers addObject:@""];
+        }
+//        NSMutableArray *answers = [[NSMutableArray alloc] initWithCapacity:[self.questionsArray count]];
+        NSLog(@"%@", answers);
         NSString *user = self.currentUser;
         ([self.allUsers setObject:answers forKey:user]);
         NSLog(@"Welcome to our app %@", self.currentUser);
@@ -76,7 +81,6 @@
     } else if ([menuResponse isEqualToString:@"3"]){
         [self readAnswers];
     }else if ([menuResponse isEqualToString:@"4"]){
-        self.listOfAnswers = [[NSMutableArray alloc] initWithObjects:@"", @"", @"", nil];
         NSLog(@"%@", self.allUsers);
         [self getUser];
         [self menu];
@@ -90,7 +94,7 @@
 -(void)createQAArrays
 {
      self.questionsArray = [[NSMutableArray alloc] initWithObjects:@"Where were you born?", @"Have you ever wanted to be an astronaut?", @"Do you like Korean food?", nil];
-    self.listOfAnswers = [[NSMutableArray alloc] initWithObjects:@"", @"", @"", nil];
+
     
 }
 
@@ -98,9 +102,9 @@
 {
     
     for (int i = 0; i < [self.questionsArray count]; i++){
-        if ([[self.listOfAnswers objectAtIndex:i] isEqualToString:@""]) {
+        if ([[[self.allUsers objectForKey:self.currentUser] objectAtIndex:i] isEqualToString:@""]) {
             NSLog(@"%@", [self.questionsArray objectAtIndex:i]);
-            [self.listOfAnswers replaceObjectAtIndex:i withObject:[self requestKeyboardInput]];
+            [[self.allUsers objectForKey:self.currentUser] replaceObjectAtIndex:i withObject:[self requestKeyboardInput]];
              }
     }
     
@@ -113,8 +117,10 @@
 {
     NSLog(@"What's yo question?");
     [self.questionsArray addObject:[self requestKeyboardInput]];
-    [self.listOfAnswers addObject:@""];
-    NSLog(@"Would you like to add another question? /r 1. Yes /r 2. No");
+    for (NSString *user in self.allUsers) {
+    [[self.allUsers objectForKey:user] addObject:@""];
+    }
+    NSLog(@"Would you like to add another question? \r 1. Yes \r 2. No");
     NSString *answer = [self requestKeyboardInput];
     if ([answer isEqualToString:@"1"]) {
         [self addQuestions];
@@ -129,11 +135,11 @@
     for (int i = 0; i < [self.questionsArray count]; i++){
         NSLog(@"%@", self.questionsArray[i]);
         
-        if ([[self.listOfAnswers objectAtIndex:i] isEqualToString:@""]){
+        if ([[[self.allUsers objectForKey:self.currentUser] objectAtIndex:i] isEqualToString:@""]){
             NSLog(@"You didn't answer the question");
         }
         else {
-            NSLog(@"%@", self.listOfAnswers[i]);
+            NSLog(@"%@", [self.allUsers objectForKey:self.currentUser][i]);
         }
     }
     [self menu];
