@@ -24,7 +24,7 @@
     [self createQAArrays];
     
     [self getUser];
-    [self menuBURGER];
+    [self menu];
 
 
 
